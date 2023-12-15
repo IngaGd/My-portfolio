@@ -1,0 +1,16 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/base';
+@import './base/typography';
+
+@import './components/hero';
+@import './components/navigation';
+@import './components/sidebar';
+
+@import './pages/contacts';
+@import './pages/home';
+@import './pages/portfolio';
+@import './pages/resume';
+
+@import '../../../../shared/styles/base/animation';

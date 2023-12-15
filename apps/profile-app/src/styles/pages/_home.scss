@@ -1,0 +1,71 @@
+.home {
+    grid-column: 1fr;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../../assets/images/profile-6.png);
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // align-items: center;
+    // justify-items: center;
+
+    &__text {
+        color: $color-grey-light-1;
+        align-self: center;
+        justify-self: flex-end;
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    &__profesion {
+        display: flex;
+        justify-content: space-around;
+        @for $i from 1 through 13 {
+            .sp-#{$i} {
+                &__underline {
+                    position: relative;
+                    &::after {
+                        width: 2.2rem;
+                        height: 2px;
+                        background-color: $color-tertiary;
+                        display: inline-block;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0rem;
+                        left: 0;
+                        transition: all 0.3s ease;
+                    }
+                }
+                &.animated {
+                    animation: apperance 0.1s;
+                    animation-fill-mode: backwards;
+                    animation-delay: #{0.5s + 0.1s * ($i - 1)};
+                }
+            }
+        }
+        .sp-1 {
+            &__underline {
+                position: relative;
+                &::after {
+                    width: 2rem;
+                    height: 2px;
+                    background-color: $color-tertiary;
+                    display: inline-block;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0rem;
+                    left: 0;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+    &__word {
+        display: flex;
+    }
+}

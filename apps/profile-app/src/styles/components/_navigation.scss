@@ -1,0 +1,186 @@
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+    &__button {
+        background-color: $color-tertiary;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 3.25rem;
+        right: 3.25rem;
+        z-index: 20;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    &__sandwich {
+        position: relative;
+        margin-top: 2.15rem;
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 2px;
+            background-color: $color-grey-dark-2;
+            display: inline-block;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        &::before {
+            top: -0.65rem;
+        }
+        &::after {
+            top: 0.65rem;
+        }
+    }
+    &__button:hover &__sandwich::before {
+        top: -0.85rem;
+    }
+    &__button:hover &__sandwich::after {
+        top: 0.85rem;
+    }
+    &__checkbox:checked + &__button &__sandwich {
+        background-color: transparent;
+    }
+    &__checkbox:checked + &__button &__sandwich::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    &__checkbox:checked + &__button &__sandwich::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__background {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 3.5rem;
+        right: 3.5rem;
+        background-image: radial-gradient(
+            $color-grey-dark-1,
+            $color-grey-dark-2
+        );
+        z-index: 10;
+        transition: all 0.3s ease;
+    }
+    &__nav {
+        height: 100vh;
+        width: 280px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 15;
+        background-color: $color-secondary;
+        transition: all 0.6s ease;
+        opacity: 0;
+        width: 0;
+
+        display: grid;
+        grid-column: 1fr;
+        grid-template-rows: repeat(4, min-content), max-content;
+        align-content: flex-start;
+        justify-content: center;
+        justify-items: center;
+        grid-row-gap: 4rem;
+        padding-top: 5rem;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        background-color: $color-grey-dark-2;
+        img {
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__heading {
+        font-size: 2.4rem;
+        color: $color-grey-light-1;
+        text-transform: uppercase;
+    }
+    &__socials {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        &--icon {
+            font-size: 2rem;
+            padding: 0.8rem 1rem;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            color: $color-grey-light-1;
+            background-color: $color-grey-dark-2;
+            transition: all 0.3s;
+        }
+        &--icon:hover,
+        &--icon:active {
+            color: $color-tertiary;
+        }
+    }
+    &__list {
+        // @include centered;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-items: flex-start;
+        gap: 2rem;
+        font-size: 1.8rem;
+    }
+    &__item {
+        transition: all 0.3s;
+        &:hover,
+        &.active {
+            .navigation__link {
+                color: $color-grey-light-1;
+            }
+            .navigation__icon {
+                color: $color-tertiary;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $color-grey-light-2;
+    }
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &__copyrights {
+        &--text {
+            padding-top: 5rem;
+            color: $color-grey-light-2;
+        }
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 280px;
+    }
+    @media screen and (min-width: 1200px) {
+        &__nav {
+            opacity: 1;
+            width: 280px;
+        }
+        &__button,
+        &__background {
+            opacity: 0;
+        }
+    }
+}
