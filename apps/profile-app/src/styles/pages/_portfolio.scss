@@ -31,25 +31,29 @@
             border-radius: 7px;
             overflow: hidden;
             position: relative;
-            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
+            // box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
             .heading-5 {
                 padding-bottom: 2rem;
             }
             &:hover .portfolio__content--caption {
                 opacity: 1;
             }
+            &:hover .portfolio__content--image {
+                transform: scale(1.25);
+            }
         }
         &--image {
             width: 100%;
             height: 100%;
-            // @include image-fit;
+            @include image-fit;
+            transition: all 0.4s;
         }
         &--caption {
             font-size: 2rem;
             background: rgba($color-white, 0.8);
             @include caption-positioning;
             justify-content: center;
+            transition: all 0.4s;
         }
     }
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import porfolioList from '../assets/data/portfolio';
+import Popup from '../components/Popup';
 
 export default function Portfolio() {
     const list = porfolioList;
     return (
-        <div className="portfolio">
+        <section className="portfolio" id="section-portfolio">
             <h2 className="heading-2">Portfolio</h2>
             <span className="underline"></span>
             <p className="portfolio__description">
@@ -23,13 +24,16 @@ export default function Portfolio() {
                         />
                         <figcaption className="portfolio__content--caption">
                             <h5 className="heading-5">{p.title}</h5>
-                            <button className="btn caption">More about</button>
+                            <a href="#popup" className="btn caption">
+                                More about
+                            </a>
                         </figcaption>
                         {/* <p className="description">{p.description}</p>
                         <a href={p.link}>GitHub link</a> */}
                     </figure>
                 ))}
+                <Popup />
             </div>
-        </div>
+        </section>
     );
 }

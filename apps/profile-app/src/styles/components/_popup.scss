@@ -1,0 +1,20 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+
+    &__content {
+        @include position-absolute-center;
+        width: 75%;
+        height: 50rem;
+        background-color: white;
+        box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.2);
+
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+}
