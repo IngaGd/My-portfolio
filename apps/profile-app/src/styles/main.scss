@@ -4,9 +4,11 @@
 @import './base/base';
 @import './base/typography';
 
+@import './components/buttons';
 @import './components/hero';
 @import './components/navigation';
 @import './components/sidebar';
+@import './components/underline';
 
 @import './pages/contacts';
 @import './pages/home';
@@ -14,3 +16,4 @@
 @import './pages/resume';
 
 @import '../../../../shared/styles/base/animation';
+@import '../../../../shared/styles/abstracts/mixins';

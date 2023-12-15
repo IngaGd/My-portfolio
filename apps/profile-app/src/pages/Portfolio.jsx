@@ -6,6 +6,7 @@ export default function Portfolio() {
     return (
         <div className="portfolio">
             <h2 className="heading-2">Portfolio</h2>
+            <span className="underline"></span>
             <p className="portfolio__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quibusdam, voluptate atque enim ut, vitae sit voluptatum aut nam
@@ -14,14 +15,19 @@ export default function Portfolio() {
             </p>
             <div className="portfolio__content">
                 {list?.map((p) => (
-                    <div className="portfolio__content--item" key={p.id}>
-                        {/* <h5 className="heading-5">{p.title}</h5> */}
-                        <figure className="image">
-                            <img src={p.image} alt={p.title} />
-                        </figure>
+                    <figure className="portfolio__content--item" key={p.id}>
+                        <img
+                            src={p.image}
+                            alt={p.title}
+                            className="portfolio__content--image"
+                        />
+                        <figcaption className="portfolio__content--caption">
+                            <h5 className="heading-5">{p.title}</h5>
+                            <button className="btn caption">More about</button>
+                        </figcaption>
                         {/* <p className="description">{p.description}</p>
                         <a href={p.link}>GitHub link</a> */}
-                    </div>
+                    </figure>
                 ))}
             </div>
         </div>
