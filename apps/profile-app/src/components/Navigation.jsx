@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import {
     IoHomeSharp,
@@ -11,8 +11,11 @@ import {
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaDiscord } from 'react-icons/fa';
 
 import image from '../assets/images/profile-2.jpeg';
+import { useContext } from 'react';
+import { GlobalContext } from './GlobalContext';
 
 export default function Navigation() {
+    const { route, setRoute } = useContext(GlobalContext);
     return (
         <div className="navigation">
             <input
@@ -52,33 +55,68 @@ export default function Navigation() {
                 <div className="navigation__list">
                     <div className="navigation__item active">
                         <IoHomeSharp className="navigation__icon" />
-                        <Link to="/" className="navigation__link">
+                        <span
+                            onClick={(_) => setRoute('home')}
+                            className={
+                                route === 'home'
+                                    ? 'navigation__link active'
+                                    : 'navigation__link'
+                            }
+                        >
                             Home
-                        </Link>
+                        </span>
                     </div>
                     <div className="navigation__item">
                         <IoPersonSharp className="navigation__icon" />
-                        <Link to="/about" className="navigation__link">
+                        <span
+                            onClick={(_) => setRoute('about')}
+                            className={
+                                route === 'about'
+                                    ? 'navigation__link active'
+                                    : 'navigation__link'
+                            }
+                        >
                             About
-                        </Link>
+                        </span>
                     </div>
                     <div className="navigation__item">
                         <IoDocumentSharp className="navigation__icon" />
-                        <Link to="/resume" className="navigation__link">
+                        <span
+                            onClick={(_) => setRoute('resume')}
+                            className={
+                                route === 'resume'
+                                    ? 'navigation__link active'
+                                    : 'navigation__link'
+                            }
+                        >
                             Resume
-                        </Link>
+                        </span>
                     </div>
                     <div className="navigation__item">
                         <IoBriefcaseSharp className="navigation__icon" />
-                        <Link to="/portfolio" className="navigation__link">
+                        <span
+                            onClick={(_) => setRoute('portfolio')}
+                            className={
+                                route === 'portfolio'
+                                    ? 'navigation__link active'
+                                    : 'navigation__link'
+                            }
+                        >
                             Portfolio
-                        </Link>
+                        </span>
                     </div>
                     <div className="navigation__item">
                         <FaEnvelope className="navigation__icon" />
-                        <Link to="/contacts" className="navigation__link">
+                        <span
+                            onClick={(_) => setRoute('contacts')}
+                            className={
+                                route === 'contacts'
+                                    ? 'navigation__link active'
+                                    : 'navigation__link'
+                            }
+                        >
                             Contacts
-                        </Link>
+                        </span>
                     </div>
                 </div>
                 <div className="navigation__copyrights">
