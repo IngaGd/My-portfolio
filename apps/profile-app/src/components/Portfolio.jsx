@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import porfolioList from '../assets/data/portfolio';
-import { GlobalContext } from '../components/GlobalContext';
 
 export default function Portfolio() {
-    const { setRoute } = useContext(GlobalContext);
     const list = porfolioList;
     return (
         <section className="portfolio" id="section-portfolio">
@@ -28,9 +26,9 @@ export default function Portfolio() {
                             <a href="#popup" className="btn caption">
                                 More about
                             </a>
-                            <button onClick={(_) => setRoute('popup')}>
+                            {/* <button onClick={(_) => setRoute('popup')}>
                                 More about
-                            </button>
+                            </button> */}
                         </figcaption>
                         {/* <p className="description">{p.description}</p>
                         <a href={p.link}>GitHub link</a> */}

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 import {
     IoHomeSharp,
@@ -11,11 +10,18 @@ import {
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaDiscord } from 'react-icons/fa';
 
 import image from '../assets/images/profile-2.jpeg';
-import { useContext } from 'react';
-import { GlobalContext } from './GlobalContext';
+import { useState } from 'react';
+import useScrollToSection from '../customHooks/useScrollToSection';
 
 export default function Navigation() {
-    const { route, setRoute } = useContext(GlobalContext);
+    const [className, setClassName] = useState('home');
+    useScrollToSection(className);
+
+    const indicateSection = (e) => {
+        setClassName(e);
+        console.log('Current className:', e);
+    };
+
     return (
         <div className="navigation">
             <input
@@ -53,70 +59,60 @@ export default function Navigation() {
                     </a>
                 </div>
                 <div className="navigation__list">
-                    <div className="navigation__item active">
+                    <div
+                        onClick={(_) => indicateSection('home')}
+                        className={
+                            className === 'home'
+                                ? 'navigation__item active'
+                                : 'navigation__item'
+                        }
+                    >
                         <IoHomeSharp className="navigation__icon" />
-                        <span
-                            onClick={(_) => setRoute('home')}
-                            className={
-                                route === 'home'
-                                    ? 'navigation__link active'
-                                    : 'navigation__link'
-                            }
-                        >
-                            Home
-                        </span>
+                        <span className="navigation__link">Home</span>
                     </div>
-                    <div className="navigation__item">
+                    <div
+                        className={
+                            className === 'about'
+                                ? 'navigation__item active'
+                                : 'navigation__item'
+                        }
+                        onClick={(_) => indicateSection('about')}
+                    >
                         <IoPersonSharp className="navigation__icon" />
-                        <span
-                            onClick={(_) => setRoute('about')}
-                            className={
-                                route === 'about'
-                                    ? 'navigation__link active'
-                                    : 'navigation__link'
-                            }
-                        >
-                            About
-                        </span>
+                        <span className="navigation__link">About</span>
                     </div>
-                    <div className="navigation__item">
+                    <div
+                        className={
+                            className === 'resume'
+                                ? 'navigation__item active'
+                                : 'navigation__item'
+                        }
+                        onClick={(_) => indicateSection('resume')}
+                    >
                         <IoDocumentSharp className="navigation__icon" />
-                        <span
-                            onClick={(_) => setRoute('resume')}
-                            className={
-                                route === 'resume'
-                                    ? 'navigation__link active'
-                                    : 'navigation__link'
-                            }
-                        >
-                            Resume
-                        </span>
+                        <span className="navigation__link">Resume</span>
                     </div>
-                    <div className="navigation__item">
+                    <div
+                        className={
+                            className === 'portfolio'
+                                ? 'navigation__item active'
+                                : 'navigation__item'
+                        }
+                        onClick={(_) => indicateSection('portfolio')}
+                    >
                         <IoBriefcaseSharp className="navigation__icon" />
-                        <span
-                            onClick={(_) => setRoute('portfolio')}
-                            className={
-                                route === 'portfolio'
-                                    ? 'navigation__link active'
-                                    : 'navigation__link'
-                            }
-                        >
-                            Portfolio
-                        </span>
+                        <span className="navigation__link">Portfolio</span>
                     </div>
-                    <div className="navigation__item">
+                    <div
+                        className={
+                            className === 'contacts'
+                                ? 'navigation__item active'
+                                : 'navigation__item'
+                        }
+                        onClick={(_) => indicateSection('contacts')}
+                    >
                         <FaEnvelope className="navigation__icon" />
-                        <span
-                            onClick={(_) => setRoute('contacts')}
-                            className={
-                                route === 'contacts'
-                                    ? 'navigation__link active'
-                                    : 'navigation__link'
-                            }
-                        >
-                            Contacts
-                        </span>
+                        <span className="navigation__link">Contacts</span>
                     </div>
                 </div>
                 <div className="navigation__copyrights">

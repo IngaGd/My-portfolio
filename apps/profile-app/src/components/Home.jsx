@@ -1,11 +1,8 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Portfolio from './Portfolio';
 
 export default function Home() {
     return (
         <>
-            <Navigation />
             <div className="container">
                 <div className="home">
                     <div className="home__text">
@@ -69,7 +66,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <Portfolio />
             </div>
         </>
     );

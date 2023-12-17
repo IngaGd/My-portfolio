@@ -4,9 +4,9 @@ import imageScrollImg from '../images/portfolio/image-scroll.png';
 import psoundImg from '../images/portfolio/psound.png';
 import simoDelicatessenImg from '../images/portfolio/simo-delicatessen.png';
 import weatherAppImg from '../images/portfolio/weather-app.png';
-import natourImg from '../images/portfolio/natour.png';
-import trilloImg from '../images/portfolio/trillo.png';
-import nexterImg from '../images/portfolio/nexter.png';
+// import natourImg from '../images/portfolio/natour.png';
+// import trilloImg from '../images/portfolio/trillo.png';
+// import nexterImg from '../images/portfolio/nexter.png';
 
 // https://github.com/IngaGd/simo-delicatessen
 // https://github.com/IngaGd/Bank-application
