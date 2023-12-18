@@ -4,16 +4,16 @@
 
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    grid-template-columns: 1fr;
-    padding: 10rem 10rem;
+
     &__content {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 3rem;
 
         &--item {
-            width: 30rem;
-            height: 30vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
             border-radius: 7px;
             overflow: hidden;
             position: relative;

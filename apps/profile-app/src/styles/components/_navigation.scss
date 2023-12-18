@@ -1,6 +1,6 @@
 .navigation {
-    grid-column: sidebar-start / sidebar-end;
-    grid-row: 1 / -1;
+    // grid-column: sidebar-start / sidebar-end;
+    // grid-row: 1 / -1;
     &__checkbox {
         display: none;
     }
@@ -76,7 +76,7 @@
     }
     &__nav {
         height: 100vh;
-        width: 28rem;
+        width: 280px;
         position: fixed;
         top: 0;
         left: 0;

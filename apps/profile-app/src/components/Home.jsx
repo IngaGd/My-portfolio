@@ -32,7 +32,7 @@ export default function Home() {
                             </div>
                             <div className="sp-7 animated">
                                 {' '}
-                                <p>w</p>
+                                <p>v</p>
                                 <span className="underline"></span>
                             </div>
                             <div className="sp-8 animated">
