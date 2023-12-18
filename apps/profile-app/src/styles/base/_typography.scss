@@ -4,6 +4,18 @@
 }
 .heading-2 {
     font-size: 3rem;
+    grid-column: 1 / -1;
+}
+.underline {
+    &::after {
+        width: 14rem;
+        height: 4px;
+    }
+}
+.description {
+    grid-column: 1 / -1;
+    padding: 3rem 0;
+    font-size: 1.6rem;
 }
 
 .heading-5 {

@@ -1,0 +1,12 @@
+.resume {
+    grid-column: center-start / center-end;
+    background-color: rgb(174, 183, 180);
+    &__content {
+        &--left {
+            background-color: beige;
+        }
+        &--rigth {
+            background-color: azure;
+        }
+    }
+}

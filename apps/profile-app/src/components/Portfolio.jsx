@@ -8,7 +8,7 @@ export default function Portfolio({ setVisibility }) {
             <section className="portfolio" id="section-portfolio">
                 <h2 className="heading-2">Portfolio</h2>
                 <span className="underline"></span>
-                <p className="portfolio__description">
+                <p className="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quibusdam, voluptate atque enim ut, vitae sit voluptatum aut
                     nam vero alias qui debitis facere reprehenderit minus magni

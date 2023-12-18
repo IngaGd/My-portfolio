@@ -1,0 +1,13 @@
+.about {
+    grid-column: center-start / center-end;
+    &__content {
+        &--image {
+        }
+        &--description {
+            .personal-info {
+            }
+            .text {
+            }
+        }
+    }
+}
