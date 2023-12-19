@@ -1,18 +1,16 @@
 import React from 'react';
 
-export default function Popup({ visibility, setVisibility }) {
+export default function Popup({ handleColePopup, selectedProject }) {
     return (
-        <div className={visibility}>
-            <div className="content">
-                <div className="images">images</div>
-                <div className="description">
-                    <button
-                        className="btn"
-                        onClick={(_) => setVisibility('popup not-visible')}
-                    >
-                        X
-                    </button>
-                </div>
+        <div className="popup">
+            <div className="popup__content">
+                <button className="btn" onClick={handleColePopup}>
+                    Close
+                </button>
+                <h2 className="heading-2">{selectedProject.title}</h2>
+                <img src={selectedProject.image} alt={selectedProject.title} />
+                <p className="description">{selectedProject.description}</p>
+                <a href={selectedProject.link}>GitHub link</a>
             </div>
         </div>
     );

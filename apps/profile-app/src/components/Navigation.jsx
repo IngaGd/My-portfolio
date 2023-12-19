@@ -9,7 +9,7 @@ import {
 
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaDiscord } from 'react-icons/fa';
 
-import image from '../assets/images/profile-2.jpeg';
+import image from '../assets/images/profile/profile-2.jpeg';
 import { useState } from 'react';
 import useScrollToSection from '../customHooks/useScrollToSection';
 

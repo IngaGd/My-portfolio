@@ -1,4 +1,8 @@
-import bankImg from '../images/portfolio/bank.png';
+import bankImgMain from '../images/portfolio/bank/bank-portfolio.png';
+import bankImg1 from '../images/portfolio/bank/bank-popup-1.png';
+import bankImg2 from '../images/portfolio/bank/bank-popup-2.png';
+import bankImg3 from '../images/portfolio/bank/bank-popup-3.png';
+import bankImg4 from '../images/portfolio/bank/bank-popup-4.png';
 import fcAppImg from '../images/portfolio/fc-app.png';
 import imageScrollImg from '../images/portfolio/image-scroll.png';
 import psoundImg from '../images/portfolio/psound.png';
@@ -21,7 +25,7 @@ const porfolioList = [
     {
         id: '1',
         title: 'Simple bank app',
-        image: bankImg,
+        image: bankImgMain,
         description: 'Not a real bank - CRUD and autentication show-of',
         link: 'https://github.com/IngaGd/Bank-application'
     },

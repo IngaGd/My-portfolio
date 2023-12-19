@@ -1,7 +1,18 @@
+import { useState } from 'react';
 import porfolioList from '../assets/data/portfolio';
+import Popup from './Popup';
 
-export default function Portfolio({ setVisibility }) {
+export default function Portfolio() {
     const list = porfolioList;
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const handleProjectSelection = (project) => {
+        setSelectedProject(project);
+    };
+
+    const handleColePopup = () => {
+        setSelectedProject(null);
+    };
 
     return (
         <>
@@ -16,28 +27,32 @@ export default function Portfolio({ setVisibility }) {
                 </p>
                 <div className="portfolio__content">
                     {list?.map((p) => (
-                        <figure className="portfolio__content--item" key={p.id}>
-                            <img
-                                src={p.image}
-                                alt={p.title}
-                                className="portfolio__content--image"
-                            />
-                            <figcaption className="portfolio__content--caption">
-                                <h5 className="heading-5">{p.title}</h5>
-                                {/* <a href="#popup" className="btn caption">
-                                More about
-                            </a> */}
-                                <button
-                                    onClick={() =>
-                                        setVisibility('popup visible')
-                                    }
-                                >
-                                    More about
-                                </button>
-                            </figcaption>
-                            {/* <p className="description">{p.description}</p>
-                        <a href={p.link}>GitHub link</a> */}
-                        </figure>
+                        <div key={p.id}>
+                            <figure className="portfolio__content--item">
+                                <img
+                                    src={p.image}
+                                    alt={p.title}
+                                    className="portfolio__content--image"
+                                />
+                                <figcaption className="portfolio__content--caption">
+                                    <h5 className="heading-5">{p.title}</h5>
+                                    <button
+                                        onClick={() =>
+                                            handleProjectSelection(p)
+                                        }
+                                    >
+                                        More about
+                                    </button>
+                                </figcaption>
+                            </figure>
+
+                            {selectedProject && (
+                                <Popup
+                                    selectedProject={selectedProject}
+                                    handleColePopup={handleColePopup}
+                                />
+                            )}
+                        </div>
                     ))}
                 </div>
             </section>
