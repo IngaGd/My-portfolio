@@ -27,19 +27,38 @@ const porfolioList = [
         title: 'Simple bank app',
         imageMain: bankImgMain,
         images: [
-            bankImg1,
-            bankImg2,
-            bankImg3,
-            bankImg4,
-        ]
-        ,
-        description: 'Not a real bank - CRUD and autentication show-of',
-        link: 'https://github.com/IngaGd/Bank-application'
+            {
+                img: bankImg1,
+                title: 'Authorization'
+            },
+            {
+                img: bankImg2,
+                title: 'Graph and create account'
+            },
+            {
+                img: bankImg3,
+                title: 'Edit account'
+            },
+            {
+                img: bankImg4,
+                title: 'Mobile layout'
+            }
+        ],
+        category: 'Full-stack',
+        tools: 'JavaScript, React, Express, SASS, XML, MySql, Linux Ubuntu/Apache',
+        description: 'Learning project, not a real bank - CRUD and autentication show-of. The project is created to show full-stack developer skils, the user can acces bank page by loging in. UserName can be any, bo sensitive data is required. Functionalities: create account, image upload, edit, delete data, block users, sorting and filtering.',
+        link: 'http://wdp.lt:3003/'
     },
     {
         id: '2',
         title: 'p-sound',
         imageMain: psoundImg,
+        images: [
+            bankImg1,
+            bankImg2,
+            bankImg3,
+            bankImg4,
+        ],
         description: `Freelance project - music producer's portfolio page with custom audio player`,
         link: 'https://p-sound.lt/'
     }
@@ -48,6 +67,12 @@ const porfolioList = [
         id: '3',
         title: 'Image scroll app',
         imageMain: imageScrollImg,
+        images: [
+            bankImg1,
+            bankImg2,
+            bankImg3,
+            bankImg4,
+        ],
         description: `Infinite image scroll app with 'like' option`,
         link: 'https://github.com/IngaGd/much-sroll-such-image'
     }
@@ -56,6 +81,12 @@ const porfolioList = [
         id: '4',
         title: 'Hystorical weather data app',
         imageMain: weatherAppImg,
+        images: [
+            bankImg1,
+            bankImg2,
+            bankImg3,
+            bankImg4,
+        ],
         description: 'Weather app with locations on map and graphs',
         link: 'https://github.com/IngaGd/weather-app'
     }
@@ -64,6 +95,24 @@ const porfolioList = [
         id: '5',
         title: 'Lemonades shop app',
         imageMain: simoDelicatessenImg,
+        images: [
+            {
+                img: bankImg1,
+                title: 'Authorization'
+            },
+            {
+                img: bankImg2,
+                title: 'Graph and create account'
+            },
+            {
+                img: bankImg3,
+                title: 'Mobile layout'
+            },
+            {
+                img: bankImg4,
+                title: 'Edit account'
+            }
+        ],
         description: 'App with add to cart functionality',
         link: 'https://github.com/IngaGd/simo-delicatessen'
     }
@@ -72,6 +121,12 @@ const porfolioList = [
         id: '6',
         title: 'Fingers crossed app',
         imageMain: fcAppImg,
+        images: [
+            bankImg1,
+            bankImg2,
+            bankImg3,
+            bankImg4,
+        ],
         description: 'App with CSS animation and count down',
         link: 'https://github.com/IngaGd/fc-react-app'
     }
