@@ -30,7 +30,7 @@ export default function Portfolio() {
                         <div key={p.id}>
                             <figure className="portfolio__content--item">
                                 <img
-                                    src={p.image}
+                                    src={p.imageMain}
                                     alt={p.title}
                                     className="portfolio__content--image"
                                 />

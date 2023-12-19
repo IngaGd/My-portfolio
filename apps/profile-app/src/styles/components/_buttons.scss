@@ -5,6 +5,7 @@
     border-radius: 2.5rem;
     cursor: pointer;
     transition: all 0.3s;
+    color: $color-grey-dark-2;
     &:hover {
         transform: translateY(-3px);
     }

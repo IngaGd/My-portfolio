@@ -25,14 +25,21 @@ const porfolioList = [
     {
         id: '1',
         title: 'Simple bank app',
-        image: bankImgMain,
+        imageMain: bankImgMain,
+        images: [
+            bankImg1,
+            bankImg2,
+            bankImg3,
+            bankImg4,
+        ]
+        ,
         description: 'Not a real bank - CRUD and autentication show-of',
         link: 'https://github.com/IngaGd/Bank-application'
     },
     {
         id: '2',
         title: 'p-sound',
-        image: psoundImg,
+        imageMain: psoundImg,
         description: `Freelance project - music producer's portfolio page with custom audio player`,
         link: 'https://p-sound.lt/'
     }
@@ -40,7 +47,7 @@ const porfolioList = [
     {
         id: '3',
         title: 'Image scroll app',
-        image: imageScrollImg,
+        imageMain: imageScrollImg,
         description: `Infinite image scroll app with 'like' option`,
         link: 'https://github.com/IngaGd/much-sroll-such-image'
     }
@@ -48,7 +55,7 @@ const porfolioList = [
     {
         id: '4',
         title: 'Hystorical weather data app',
-        image: weatherAppImg,
+        imageMain: weatherAppImg,
         description: 'Weather app with locations on map and graphs',
         link: 'https://github.com/IngaGd/weather-app'
     }
@@ -56,7 +63,7 @@ const porfolioList = [
     {
         id: '5',
         title: 'Lemonades shop app',
-        image: simoDelicatessenImg,
+        imageMain: simoDelicatessenImg,
         description: 'App with add to cart functionality',
         link: 'https://github.com/IngaGd/simo-delicatessen'
     }
@@ -64,7 +71,7 @@ const porfolioList = [
     {
         id: '6',
         title: 'Fingers crossed app',
-        image: fcAppImg,
+        imageMain: fcAppImg,
         description: 'App with CSS animation and count down',
         link: 'https://github.com/IngaGd/fc-react-app'
     }

@@ -1,0 +1,45 @@
+.image-slider {
+    height: 100%;
+    position: relative;
+    padding: 5rem;
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 3rem;
+        color: $color-tertiary;
+        z-index: 30;
+        cursor: pointer;
+        &.left {
+            left: 7rem;
+        }
+        &.right {
+            right: 7rem;
+        }
+    }
+    &__slide {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 7px;
+    }
+    &__dots {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        .dot {
+            margin-right: 1rem;
+            color: $color-grey-dark-2;
+            &:hover,
+            &.active {
+                color: $color-tertiary;
+            }
+        }
+    }
+}

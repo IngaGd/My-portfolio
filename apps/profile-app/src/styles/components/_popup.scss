@@ -1,5 +1,4 @@
 .popup {
-    // &.visible {
     visibility: visible;
     height: 100vh;
     width: 100%;
@@ -8,21 +7,19 @@
     left: 0;
     z-index: 90;
     background-color: rgba(black, 0.2);
-    // }
-    // &.not-visible {
-    //     visibility: hidden;
-    // }
     &__content {
         @include position-absolute-center;
         width: 75%;
         height: 50rem;
         background-color: white;
         box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.2);
+        border-radius: 3px;
 
         display: grid;
         grid-template-columns: 60% 40%;
-        img {
-            width: 20rem;
+
+        &--left {
+            display: grid;
         }
     }
 }
