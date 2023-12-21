@@ -29,24 +29,24 @@ const porfolioList = [
         images: [
             {
                 img: bankImg1,
-                title: 'Authorization'
+                title: 'Authorization functionality'
             },
             {
                 img: bankImg2,
-                title: 'Graph and create account'
+                title: 'Graph and create account functionality'
             },
             {
                 img: bankImg3,
-                title: 'Edit account'
+                title: 'Edit account funtionality, filter and sort'
             },
             {
                 img: bankImg4,
-                title: 'Mobile layout'
+                title: 'Respinsive design'
             }
         ],
         category: 'Full-stack',
         tools: 'JavaScript, React, Express, SASS, XML, MySql, Linux Ubuntu/Apache',
-        description: 'Learning project, not a real bank - CRUD and autentication show-of. The project is created to show full-stack developer skils, the user can acces bank page by loging in. UserName can be any, bo sensitive data is required. Functionalities: create account, image upload, edit, delete data, block users, sorting and filtering.',
+        description: 'Learning project, not a real bank - CRUD and autentication demonstration. The project is created to show full-stack developer skills, the user can access bank page by loging in. User name can be any, no sensitive data is required. Functionalities: create account, image upload, edit, delete data, block users, sorting and filtering.',
         link: 'http://wdp.lt:3003/'
     },
     {

@@ -13,21 +13,23 @@ export default function Popup({ handleColePopup, selectedProject }) {
                     <div className="project-info">
                         <h6 className="heading-6">Project information:</h6>
                         <div className="project-info__category">
-                            Category: {selectedProject.category}
+                            <b>Category:</b> {selectedProject.category}
                         </div>
                         <div className="project-info__tools">
-                            Tools: {selectedProject.tools}
+                            <b>Tools:</b> {selectedProject.tools}
                         </div>
                         <div className="project-info__link">
-                            Prpject URL: {selectedProject.link}
+                            <b>Prpject URL:</b> {selectedProject.link}
                         </div>
                     </div>
                     <p className="description">
                         <b>Description:</b> {selectedProject.description}
                     </p>
-                    <button className="btn" onClick={handleColePopup}>
-                        Close
-                    </button>
+                    <div className="button-box">
+                        <button className="btn" onClick={handleColePopup}>
+                            Close
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -11,6 +11,9 @@
 }
 .heading-4 {
     font-size: 2.2rem;
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 2rem;
+    }
 }
 .underline {
     &::after {
@@ -26,8 +29,4 @@
 
 .heading-5 {
     font-size: 2rem;
-}
-
-.heading-6 {
-    font-size: 1.6rem;
 }
