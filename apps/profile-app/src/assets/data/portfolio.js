@@ -4,22 +4,24 @@ import bankImg2 from '../images/portfolio/bank/bank-popup-2.png';
 import bankImg3 from '../images/portfolio/bank/bank-popup-3.png';
 import bankImg4 from '../images/portfolio/bank/bank-popup-4.png';
 import fcAppImg from '../images/portfolio/fc-app.png';
-import imageScrollImg from '../images/portfolio/image-scroll.png';
-import psoundImg from '../images/portfolio/psound.png';
+import imageScrollMain from '../images/portfolio/image-scroll/image-scroll-portfolio.png';
+import imageScrollImg1 from '../images/portfolio/image-scroll/image-scroll-1.png';
+import imageScrollImg2 from '../images/portfolio/image-scroll/image-scroll-2.png';
+import imageScrollImg3 from '../images/portfolio/image-scroll/image-scroll-3.png';
+import psoundImgMain from '../images/portfolio/p-sound/psound-portfolio.png';
+import psoundImg1 from '../images/portfolio/p-sound/psound-1.png';
+import psoundImg2 from '../images/portfolio/p-sound/psound-2.png';
+import psoundImg3 from '../images/portfolio/p-sound/psound-3.png';
+import psoundImg4 from '../images/portfolio/p-sound/psound-4.png';
 import simoDelicatessenImg from '../images/portfolio/simo-delicatessen.png';
-import weatherAppImg from '../images/portfolio/weather-app.png';
+import weatherAppImgMain from '../images/portfolio/weather-app/weather-app-portfolio.png';
+import weatherAppImg1 from '../images/portfolio/weather-app/weather-app-1.png';
+import weatherAppImg2 from '../images/portfolio/weather-app/weather-app-2.png';
+import weatherAppImg3 from '../images/portfolio/weather-app/weather-app-3.png';
+import weatherAppImg4 from '../images/portfolio/weather-app/weather-app-4.png';
 // import natourImg from '../images/portfolio/natour.png';
 // import trilloImg from '../images/portfolio/trillo.png';
 // import nexterImg from '../images/portfolio/nexter.png';
-
-// https://github.com/IngaGd/simo-delicatessen
-// https://github.com/IngaGd/Bank-application
-// https://github.com/IngaGd/Nexter
-// https://github.com/IngaGd/fc-react-app
-// https://github.com/IngaGd/weather-app
-// https://github.com/IngaGd/Trillo-CSS
-// https://github.com/IngaGd/Natour-CSS
-// https://github.com/IngaGd/much-sroll-such-image
 
 const porfolioList = [
     {
@@ -45,49 +47,86 @@ const porfolioList = [
             }
         ],
         category: 'Full-stack',
-        tools: 'JavaScript, React, Express, SASS, XML, MySql, Linux Ubuntu/Apache',
+        tools: 'JavaScript, React, Express, SASS, XML, MySql, Git, Linux Ubuntu',
         description: 'Learning project, not a real bank - CRUD and autentication demonstration. The project is created to show full-stack developer skills, the user can access bank page by loging in. User name can be any, no sensitive data is required. Functionalities: create account, image upload, edit, delete data, block users, sorting and filtering.',
         link: 'http://wdp.lt:3003/'
     },
     {
         id: '2',
         title: 'p-sound',
-        imageMain: psoundImg,
+        imageMain: psoundImgMain,
+        category: 'Full-stack',
+        tools: 'JavaScript, React, Express, SASS, XML, SendGrid, Git, Linux Ubuntu',
         images: [
-            bankImg1,
-            bankImg2,
-            bankImg3,
-            bankImg4,
+            {
+                img: psoundImg1,
+                title: 'Header scroll to top apparance'
+            },
+            {
+                img: psoundImg2,
+                title: 'Custom audio player'
+            },
+            {
+                img: psoundImg3,
+                title: 'Form integration'
+            },
+            {
+                img: psoundImg4,
+                title: 'Respinsive design'
+            }
         ],
-        description: `Freelance project - music producer's portfolio page with custom audio player`,
+        description: `Freelance project - music producer's portfolio page with custom audio player. Project made from scratch to deployment into hosting server and with ssl integration. Project's functionalities: responsive design, audio player, sroll-to top header appearnce, form integration with SendGrid.`,
         link: 'https://p-sound.lt/'
     }
     ,
     {
         id: '3',
         title: 'Image scroll app',
-        imageMain: imageScrollImg,
+        imageMain: imageScrollMain,
+        category: 'Front-end',
+        tools: 'JavaScript, React, SASS, XML, Pexels API, Git',
         images: [
-            bankImg1,
-            bankImg2,
-            bankImg3,
-            bankImg4,
+            {
+                img: imageScrollImg1,
+                title: 'Image fetch from Pexels'
+            },
+            {
+                img: imageScrollImg2,
+                title: 'Favourite image option'
+            }, {
+                img: imageScrollImg3,
+                title: 'Responsive design'
+            }
         ],
-        description: `Infinite image scroll app with 'like' option`,
+        description: `Infinite image scroll app with 'like' option, project is created with Pexels API integration, favourite and unfavourite funtionality integration with localstorage. Created GitHub page.`,
         link: 'https://github.com/IngaGd/much-sroll-such-image'
     }
     ,
     {
         id: '4',
         title: 'Hystorical weather data app',
-        imageMain: weatherAppImg,
+        imageMain: weatherAppImgMain,
+        category: 'Front-end',
+        tools: 'JavaScript, React, React-chart, Leaflet, UUID, Open-meteo, SASS, XML, Git',
         images: [
-            bankImg1,
-            bankImg2,
-            bankImg3,
-            bankImg4,
+            {
+                img: weatherAppImg1,
+                title: 'Map integration'
+            },
+            {
+                img: weatherAppImg2,
+                title: 'Marker for points on map'
+            },
+            {
+                img: weatherAppImg3,
+                title: 'Weather option selection'
+            },
+            {
+                img: weatherAppImg4,
+                title: 'Wether option graphical display'
+            }
         ],
-        description: 'Weather app with locations on map and graphs',
+        description: 'Weather app with locations on map selection, weather options choosal and graphical representation.  Data is fetched from open source API - open-meteo, map is integrated with Leaflet lybrary and graphs with react-graph. Created GitHub page.',
         link: 'https://github.com/IngaGd/weather-app'
     }
     ,

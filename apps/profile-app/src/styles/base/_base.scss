@@ -29,25 +29,34 @@ body {
     //     )
     //     [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns:
-        [full-start] minmax(6rem, 1fr)
+        [full-start] minmax(3rem, 1fr)
         [center-start] repeat(
             8,
             [col-start] minmax(min-content, 14rem) [col-end]
         )
-        [center-end] minmax(6rem, 1fr) [full-end];
+        [center-end] minmax(3rem, 1fr) [full-end];
 
     padding-left: 280px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: $bp-largest) {
         padding-left: 0;
     }
-}
 
-// @media screen and (max-width: 1200px) {
-//     grid-template-columns:
-//         [full-start] minmax(6rem, 1fr)
-//         [center-start] repeat(
-//             8,
-//             [col-start] minmax(min-content, 14rem) [col-end]
-//         )
-//         [center-end] minmax(6rem, 1fr) [full-end];
-// }
+    @media only screen and (min-width: $bp-small) {
+        grid-template-columns:
+            [full-start] minmax(5rem, 1fr)
+            [center-start] repeat(
+                8,
+                [col-start] minmax(min-content, 14rem) [col-end]
+            )
+            [center-end] minmax(5rem, 1fr) [full-end];
+    }
+    @media screen and (max-width: $bp-medium) {
+        grid-template-columns:
+            [full-start] minmax(6rem, 1fr)
+            [center-start] repeat(
+                8,
+                [col-start] minmax(min-content, 14rem) [col-end]
+            )
+            [center-end] minmax(6rem, 1fr) [full-end];
+    }
+}

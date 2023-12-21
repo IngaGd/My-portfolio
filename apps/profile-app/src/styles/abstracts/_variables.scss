@@ -17,7 +17,9 @@ $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 // RESPONSIVE BREAKPOINTS
+$bp-extra: 90rem; //1520px
 $bp-largest: 75em; // 1200px
 $bp-large: 64em; // 1024px
+$bp-medium-l: 60.3125em; // 965px;
 $bp-medium: 48em; // 768px;
-// $bp-small: 48em; // 768px;
+$bp-small: 37.5em; // 600px;

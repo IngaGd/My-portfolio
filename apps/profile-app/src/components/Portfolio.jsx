@@ -37,6 +37,7 @@ export default function Portfolio() {
                                 <figcaption className="portfolio__content--caption">
                                     <h5 className="heading-5">{p.title}</h5>
                                     <button
+                                        className="btn"
                                         onClick={() =>
                                             handleProjectSelection(p)
                                         }

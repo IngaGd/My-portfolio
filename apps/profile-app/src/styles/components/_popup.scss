@@ -15,6 +15,7 @@
         overflow-y: auto;
         background-color: $color-grey-light-1;
         padding: 2rem;
+        border-radius: 3px;
 
         display: grid;
         grid-template-rows: 40rem auto;
@@ -89,6 +90,10 @@
                 &__tools {
                 }
                 &__link {
+                    a {
+                        color: inherit;
+                        text-decoration-color: $color-tertiary;
+                    }
                 }
             }
             .description {

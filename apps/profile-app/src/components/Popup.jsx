@@ -19,7 +19,14 @@ export default function Popup({ handleColePopup, selectedProject }) {
                             <b>Tools:</b> {selectedProject.tools}
                         </div>
                         <div className="project-info__link">
-                            <b>Prpject URL:</b> {selectedProject.link}
+                            <b>Prpject URL: </b>
+                            <a
+                                href={selectedProject.link}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {selectedProject.link}
+                            </a>
                         </div>
                     </div>
                     <p className="description">
