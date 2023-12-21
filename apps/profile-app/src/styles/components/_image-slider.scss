@@ -5,6 +5,11 @@
     height: 100%;
     width: 100%;
     padding: 1rem 2rem 7rem 2rem;
+    @media only screen and (min-width: $bp-medium) {
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+    }
     &--title {
         font-size: 1.4rem;
         padding-bottom: 1rem;
