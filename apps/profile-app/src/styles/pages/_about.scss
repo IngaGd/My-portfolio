@@ -1,11 +1,94 @@
 .about {
     grid-column: center-start / center-end;
-    padding-top: 4em;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+
+    @media only screen and (min-width: $bp-medium-l) {
+        grid-template-rows: repeat(2, min-content) max-content;
+    }
+
     &__content {
+        display: grid;
+
+        grid-template-rows: repeat(2, min-content);
+        grid-template-columns: 1fr;
+
+        @media only screen and (min-width: $bp-medium-l) {
+            grid-template-rows: 1fr;
+            grid-template-columns: 0.75fr 1.25fr;
+            column-gap: 4rem;
+        }
+
         &--image {
+            grid-row: 1;
+
+            height: 100%;
+            min-width: 100%;
+            border-radius: 3px;
+            overflow: hidden;
+            padding-bottom: 2rem;
+
+            @media only screen and (min-width: $bp-small) {
+                padding: 5rem;
+            }
+            @media only screen and (min-width: $bp-medium-l) {
+                grid-column: 1;
+                padding: 0;
+            }
+            img {
+                width: 100%;
+
+                @include image-fit;
+                @media only screen and (min-width: $bp-medium-l) {
+                    height: 40rem;
+                }
+            }
         }
         &--description {
+            grid-row: 2;
+            font-size: 1.6rem;
+            display: grid;
+            grid-template-rows: repeat(4, min-content);
+            row-gap: 2rem;
+            text-align: justify;
+
+            @media only screen and (min-width: $bp-medium-l) {
+                grid-column: 2;
+                grid-row: 1;
+
+                display: grid;
+                grid-template-rows: repeat(4, min-content);
+                row-gap: 2.5rem;
+            }
+
+            .heading-3 {
+            }
             .personal-info {
+                display: grid;
+
+                @media only screen and (min-width: $bp-medium-l) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                &--list-left,
+                &--list-right {
+                    .list-item {
+                        display: flex;
+                        height: 4rem;
+                        align-items: center;
+                        p {
+                            padding-left: 1rem;
+                        }
+                        span {
+                            color: $color-tertiary;
+                        }
+                    }
+                }
+                &--list-right {
+                    .list-item {
+                    }
+                }
             }
             .text {
             }
