@@ -5,7 +5,7 @@ import { FaChevronRight } from 'react-icons/fa6';
 
 export default function About() {
     return (
-        <div className="about">
+        <div className="about u-section-padding">
             <h2 className="heading-2">About</h2>
             <span className="underline"></span>
             <p className="description">

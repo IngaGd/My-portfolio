@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Contacts() {
     return (
-        <div className="contacts">
+        <div className="contacts u-section-padding">
             <h2 className="heading-2">Contacts</h2>
             <span className="underline"></span>
             <p className="description">

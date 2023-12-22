@@ -16,7 +16,7 @@ export default function Portfolio() {
 
     return (
         <>
-            <section className="portfolio" id="section-portfolio">
+            <section className="portfolio u-section-padding">
                 <h2 className="heading-2">Portfolio</h2>
                 <span className="underline"></span>
                 <p className="description">

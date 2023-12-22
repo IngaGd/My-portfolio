@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Resume() {
     return (
-        <div className="resume">
+        <div className="resume  u-section-padding">
             <div className="heading-2">Resume</div>
             <span className="underline"></span>
             <p className="description">

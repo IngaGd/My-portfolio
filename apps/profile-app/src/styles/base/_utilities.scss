@@ -1,0 +1,18 @@
+.u-section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @media only screen and (min-width: $bp-small) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    @media only screen and (min-width: $bp-medium) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    @media only screen and (min-width: $bp-medium-l) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
