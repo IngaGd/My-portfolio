@@ -73,6 +73,8 @@
                 width: 90%;
                 margin: 0 auto;
                 font-size: 1.2rem;
+                border-radius: 3px;
+                box-shadow: $container-box-shadow;
                 @media only screen and (min-width: $bp-medium) {
                     grid-row: 2;
                     grid-column: 1;

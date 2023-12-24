@@ -9,6 +9,20 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-medium-l) {
+        // width < 965px;
+        font-size: 50%; //1rem - 8px, 8/16 = 50%
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+        // width < 1200 px
+        font-size: 56.25%; //1rem - 9px, 9/16 = 56,25%
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 70%;
+    }
 }
 
 body {
@@ -28,35 +42,48 @@ body {
     //         [col-start] minmax(min-content, 14rem) [col-end]
     //     )
     //     [center-end] minmax(6rem, 1fr) [full-end];
-    grid-template-columns:
-        [full-start] minmax(3rem, 1fr)
-        [center-start] repeat(
-            8,
-            [col-start] minmax(min-content, 14rem) [col-end]
-        )
-        [center-end] minmax(3rem, 1fr) [full-end];
+    grid-template-columns: [full-start] [full-end];
 
     padding-left: 280px;
     @media screen and (max-width: $bp-largest) {
         padding-left: 0;
     }
 
-    @media only screen and (min-width: $bp-small) {
+    .background {
+        grid-column: full-start / full-end;
+
+        display: grid;
         grid-template-columns:
-            [full-start] minmax(5rem, 1fr)
+            minmax(3rem, 1fr)
             [center-start] repeat(
                 8,
                 [col-start] minmax(min-content, 14rem) [col-end]
             )
-            [center-end] minmax(5rem, 1fr) [full-end];
-    }
-    @media screen and (max-width: $bp-medium) {
-        grid-template-columns:
-            [full-start] minmax(6rem, 1fr)
-            [center-start] repeat(
-                8,
-                [col-start] minmax(min-content, 14rem) [col-end]
-            )
-            [center-end] minmax(6rem, 1fr) [full-end];
+            [center-end] minmax(3rem, 1fr);
+
+        @media only screen and (min-width: $bp-small) {
+            grid-template-columns:
+                minmax(5rem, 1fr)
+                [center-start] repeat(
+                    8,
+                    [col-start] minmax(min-content, 14rem) [col-end]
+                )
+                [center-end] minmax(5rem, 1fr);
+        }
+        @media screen and (max-width: $bp-medium) {
+            grid-template-columns:
+                minmax(6rem, 1fr)
+                [center-start] repeat(
+                    8,
+                    [col-start] minmax(min-content, 14rem) [col-end]
+                )
+                [center-end] minmax(6rem, 1fr);
+        }
+        &.white {
+            background-color: $color-white;
+        }
+        &.grey {
+            background-color: $color-grey-light-1;
+        }
     }
 }

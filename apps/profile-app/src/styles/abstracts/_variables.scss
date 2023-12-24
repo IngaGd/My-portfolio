@@ -2,7 +2,7 @@ $color-primary: #c69963;
 $color-secondary: #080f17;
 $color-tertiary: aquamarine;
 
-$color-grey-light-1: #f9f7f6;
+$color-grey-light-1: #f2f0f0;
 $color-grey-light-2: rgb(147, 146, 146);
 $color-grey-light-3: rgb(181, 179, 179);
 
@@ -11,6 +11,8 @@ $color-grey-dark-2: #393838;
 
 $color-white: white;
 $color-black: black;
+
+$container-box-shadow: 0 0 15px 0px rgba($color-black, 0.1);
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
