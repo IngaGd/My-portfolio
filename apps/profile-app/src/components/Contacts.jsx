@@ -19,21 +19,18 @@ export default function Contacts() {
                     <div className="contacts__details">
                         <div className="contact-info">
                             <span>
-                                <FaEnvelope className="contact-info__icon" />
+                                <FaLocationDot className="contact-info__icon" />
                             </span>
                             <div className="contact-info__texts">
                                 <p className="contact-info__title">
                                     Location:{' '}
                                 </p>
-                                <p>
-                                    Rinktinės Street 3A/77, Vilnius, LT09234,
-                                    Lithuania
-                                </p>
+                                <p>Vilnius, Lithuania</p>
                             </div>
                         </div>
                         <div className="contact-info">
                             <span>
-                                <FaLocationDot className="contact-info__icon" />
+                                <FaEnvelope className="contact-info__icon" />
                             </span>
                             <div className="contact-info__texts">
                                 <p className="contact-info__title">Email: </p>
@@ -51,10 +48,10 @@ export default function Contacts() {
                         </div>
                         <div className="contacts__map-box">
                             <iframe
-                                src="https://maps.google.com/maps?q=Rinktines%203a-77&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                src="https://maps.google.com/maps?q=Vilnius&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
                                 frameborder="0"
                                 scrolling="no"
-                                title="Rinktines str. 3A"
+                                title="Vilnius City Municipality"
                                 allowfullscreen
                                 className="map"
                             ></iframe>
