@@ -12,7 +12,8 @@ export default function Resume() {
                     Junior Full-stack web developer specialising in SASS, React,
                     NodeJS and MySQL. Executed and contributed to the full-stack
                     web development projects, with an emphasis on front-end
-                    features and micro-services. For a
+                    features and micro-services. Currently freelancing, from
+                    previous life has stong experiance in management.
                 </p>
                 <div className="resume__content">
                     {resumeList?.map((r, index) => (
