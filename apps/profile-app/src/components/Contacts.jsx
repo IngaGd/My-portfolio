@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FaLocationDot, FaMobile, FaEnvelope } from 'react-icons/fa6';
+import Form from './Form';
 
 export default function Contacts() {
     return (
@@ -15,13 +16,15 @@ export default function Contacts() {
                     assumenda quia id fuga.
                 </p>
                 <div className="contacts__content">
-                    <div className="contacts__content--details">
+                    <div className="contacts__details">
                         <div className="contact-info">
                             <span>
-                                <FaEnvelope />
+                                <FaEnvelope className="contact-info__icon" />
                             </span>
-                            <div>
-                                <p>Location: </p>
+                            <div className="contact-info__texts">
+                                <p className="contact-info__title">
+                                    Location:{' '}
+                                </p>
                                 <p>
                                     Rinktinės Street 3A/77, Vilnius, LT09234,
                                     Lithuania
@@ -30,25 +33,36 @@ export default function Contacts() {
                         </div>
                         <div className="contact-info">
                             <span>
-                                <FaLocationDot />
+                                <FaLocationDot className="contact-info__icon" />
                             </span>
-                            <div>
-                                <p>Email: </p>
+                            <div className="contact-info__texts">
+                                <p className="contact-info__title">Email: </p>
                                 <p>inga.gudaite@gmail.com</p>
                             </div>
                         </div>
                         <div className="contact-info">
                             <span>
-                                <FaMobile />
+                                <FaMobile className="contact-info__icon" />
                             </span>
-                            <div>
-                                <p>Call: </p>
+                            <div className="contact-info__texts">
+                                <p className="contact-info__title">Call: </p>
                                 <p>+370 656 09296</p>
                             </div>
                         </div>
-                        <div className="map"></div>
+                        <div className="contacts__map-box">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Rinktines%203a-77&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                frameborder="0"
+                                scrolling="no"
+                                title="Rinktines str. 3A"
+                                allowfullscreen
+                                className="map"
+                            ></iframe>
+                        </div>
                     </div>
-                    <div className="contacts__content--form">form</div>
+                    <div className="contacts__form">
+                        <Form />
+                    </div>
                 </div>
             </div>
         </div>

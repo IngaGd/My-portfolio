@@ -8,6 +8,7 @@
     color: $color-grey-dark-2;
     &:hover {
         transform: translateY(-3px);
+        box-shadow: $container-box-shadow;
     }
     &.caption {
     }
