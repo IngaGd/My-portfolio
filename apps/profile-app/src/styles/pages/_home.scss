@@ -8,16 +8,20 @@
 
     display: grid;
     grid-template-rows: 100vh;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+
+    @media only screen and (min-width: $bp-small) {
+        grid-template-columns: 1fr 1fr;
+    }
 
     &__text {
         color: $color-grey-light-1;
         align-self: center;
-        justify-self: flex-end;
+        justify-self: center;
         font-size: 3rem;
         font-weight: 400;
+        @media only screen and (min-width: $bp-small) {
+            justify-self: flex-end;
+        }
     }
     &__profesion {
         display: flex;
