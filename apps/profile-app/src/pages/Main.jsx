@@ -9,8 +9,8 @@ import Resume from '../components/Resume';
 export default function Main() {
     return (
         <>
-            <Navigation />
             <div className="container">
+                <Navigation />
                 <Home />
                 <About />
                 <Resume />

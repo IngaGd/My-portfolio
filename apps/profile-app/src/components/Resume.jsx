@@ -13,7 +13,7 @@ export default function Resume() {
                     NodeJS and MySQL. Executed and contributed to the full-stack
                     web development projects, with an emphasis on front-end
                     features and micro-services. Currently freelancing, from
-                    previous life has stong experiance in management.
+                    previous life has strong experiance in management.
                 </p>
                 <div className="resume__content">
                     {resumeList?.map((r, index) => (

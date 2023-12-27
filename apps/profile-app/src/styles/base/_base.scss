@@ -17,7 +17,7 @@ html {
 
     @media only screen and (max-width: $bp-largest) {
         // width < 1200 px
-        font-size: 56.25%; //1rem - 9px, 9/16 = 56,25%
+        font-size: 62.5%;
     }
 
     @media only screen and (min-width: $bp-largest) {
@@ -42,42 +42,58 @@ body {
     //         [col-start] minmax(min-content, 14rem) [col-end]
     //     )
     //     [center-end] minmax(6rem, 1fr) [full-end];
-    grid-template-columns: [full-start] [full-end];
+    // grid-template-columns:
+    //     [full-start] minmax(3rem, 1fr)
+    //     [center-start] repeat(
+    //         8,
+    //         [col-start] minmax(min-content, 14rem) [col-end]
+    //     )
+    //     [center-end] minmax(3rem, 1fr) [full-end];
 
-    padding-left: 280px;
-    @media screen and (max-width: $bp-largest) {
-        padding-left: 0;
-    }
+    // @media screen and (min-width: $bp-largest) {
+    //     grid-template-columns:
+    //         [sidebar-start] 280px [sidebar-end full-start] minmax(6rem, 1fr)
+    //         [center-start] repeat(
+    //             8,
+    //             [col-start] minmax(min-content, 14rem) [col-end]
+    //         )
+    //         [center-end] minmax(6rem, 1fr) [full-end];
+    // }
+    grid-template-columns: [full-start] [full-end];
 
     .background {
         grid-column: full-start / full-end;
+        position: relative;
 
         display: grid;
+        // grid-template-columns:
+
+        // @media only screen and (min-width: $bp-small) {
         grid-template-columns:
-            minmax(3rem, 1fr)
+            minmax(5rem, 1fr)
             [center-start] repeat(
                 8,
                 [col-start] minmax(min-content, 14rem) [col-end]
             )
-            [center-end] minmax(3rem, 1fr);
-
-        @media only screen and (min-width: $bp-small) {
+            [center-end] minmax(5rem, 1fr);
+        // }
+        @media screen and (min-width: $bp-largest) {
             grid-template-columns:
-                minmax(5rem, 1fr)
-                [center-start] repeat(
-                    8,
-                    [col-start] minmax(min-content, 14rem) [col-end]
-                )
-                [center-end] minmax(5rem, 1fr);
-        }
-        @media screen and (max-width: $bp-medium) {
-            grid-template-columns:
-                minmax(6rem, 1fr)
+                [sidebar-start] 280px [sidebar-end] minmax(6rem, 1fr)
                 [center-start] repeat(
                     8,
                     [col-start] minmax(min-content, 14rem) [col-end]
                 )
                 [center-end] minmax(6rem, 1fr);
+        }
+        @media screen and (min-width: $bp-extra) {
+            grid-template-columns:
+                [sidebar-start] 280px [sidebar-end] 6rem
+                [center-start] repeat(
+                    8,
+                    [col-start] minmax(min-content, 14rem) [col-end]
+                )
+                [center-end] 6rem;
         }
         &.white {
             background-color: $color-white;

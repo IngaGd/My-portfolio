@@ -1,6 +1,9 @@
 .navigation {
-    // grid-column: sidebar-start / sidebar-end;
-    // grid-row: 1 / -1;
+    @media screen and (min-width: $bp-largest) {
+        grid-column: sidebar-start / sidebar-end;
+        grid-row: 2 / -1;
+    }
+
     &__checkbox {
         display: none;
     }
