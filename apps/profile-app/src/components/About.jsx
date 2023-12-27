@@ -2,11 +2,15 @@ import React from 'react';
 
 import image from '../assets/images/profile/profile-7.png';
 import { FaChevronRight } from 'react-icons/fa6';
+import { useInView } from 'react-intersection-observer';
 
 export default function About() {
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
     return (
         <div className="background white">
-            <div className="about u-section-padding">
+            <div className="about u-section-padding" ref={ref}>
                 <h2 className="heading-2">About</h2>
                 <span className="underline"></span>
                 <p className="description">
@@ -16,10 +20,18 @@ export default function About() {
                     assumenda quia id fuga.
                 </p>
                 <div className="about__content">
-                    <div className="about__content--image">
+                    <div
+                        className={`about__content--image ${
+                            inView ? 'animated' : ''
+                        }`}
+                    >
                         <img src={image} alt="Profile" />
                     </div>
-                    <div className="about__content--description">
+                    <div
+                        className={`about__content--description ${
+                            inView ? 'animated' : ''
+                        }`}
+                    >
                         <h2 className="heading-3">Full-Stack Developer</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing

@@ -11,6 +11,11 @@
 
         font-size: 1.4rem;
 
+        &.animated {
+            animation: apperance 1.5s ease-in;
+            animation-fill-mode: backwards;
+        }
+
         @media only screen and (min-width: $bp-medium-l) {
             grid-template-rows: 1fr;
             grid-template-columns: 0.9fr 1.1fr;

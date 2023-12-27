@@ -1,11 +1,14 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import resumeList from '../assets/data/resume';
 
 export default function Resume() {
-    // const list = resumeList;
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
     return (
         <div className="background grey">
-            <div className="resume u-section-padding">
+            <div className="resume u-section-padding" ref={ref}>
                 <h2 className="heading-2">Resume</h2>
                 <span className="underline"></span>
                 <p className="description">
@@ -23,7 +26,12 @@ export default function Resume() {
                         >
                             <h3 className="heading-3">{r.sectionTitle}</h3>
                             {r.content?.map((c, index) => (
-                                <div className="resume__text" key={index}>
+                                <div
+                                    key={index}
+                                    className={`resume__text ${
+                                        inView ? 'animated' : ''
+                                    }`}
+                                >
                                     <div className="resume__text--line-left"></div>
                                     <div className="resume__text--column-right">
                                         <div className="resume__text--title">

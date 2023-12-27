@@ -1,12 +1,15 @@
 import React from 'react';
-
+import { useInView } from 'react-intersection-observer';
 import { FaLocationDot, FaMobile, FaEnvelope } from 'react-icons/fa6';
 import Form from './Form';
 
 export default function Contacts() {
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
     return (
         <div className="background grey">
-            <div className="contacts u-section-padding">
+            <div className="contacts u-section-padding" ref={ref}>
                 <h2 className="heading-2">Contacts</h2>
                 <span className="underline"></span>
                 <p className="description">
@@ -15,7 +18,9 @@ export default function Contacts() {
                     nam vero alias qui debitis facerse reprehenderit minus magni
                     assumenda quia id fuga.
                 </p>
-                <div className="contacts__content">
+                <div
+                    className={`contacts__content ${inView ? 'animated' : ''}`}
+                >
                     <div className="contacts__details">
                         <div className="contact-info">
                             <span>

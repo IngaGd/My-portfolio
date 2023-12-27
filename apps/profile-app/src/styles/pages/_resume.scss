@@ -36,6 +36,12 @@
         display: grid;
         grid-template-columns: 1px 1fr;
         padding-bottom: 3rem;
+        &.animated {
+            animation-name: moveInBottom;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: backwards;
+        }
         &--line-left {
             grid-column: 1;
             margin-top: 2rem;
