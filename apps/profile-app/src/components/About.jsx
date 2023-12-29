@@ -1,13 +1,20 @@
 import React from 'react';
-
 import image from '../assets/images/profile/profile-7.png';
 import { FaChevronRight } from 'react-icons/fa6';
 import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
-export default function About() {
-    const { ref, inView } = useInView({
+export default function About({ setSection }) {
+    const [ref, inView] = useInView({
         threshold: 0.2,
     });
+
+    useEffect(() => {
+        if (inView) {
+            setSection('about');
+        }
+    }, [inView, setSection]);
+
     return (
         <div className="background white">
             <div className="about u-section-padding" ref={ref}>

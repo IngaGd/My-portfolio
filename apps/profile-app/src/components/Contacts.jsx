@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FaLocationDot, FaMobile, FaEnvelope } from 'react-icons/fa6';
 import Form from './Form';
 
-export default function Contacts() {
-    const { ref, inView } = useInView({
+export default function Contacts({ setSection }) {
+    const [ref, inView] = useInView({
         threshold: 0.2,
     });
+
+    useEffect(() => {
+        if (inView) {
+            setSection('contacts');
+        }
+    }, [inView, setSection]);
+
     return (
         <div className="background grey">
             <div className="contacts u-section-padding" ref={ref}>

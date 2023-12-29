@@ -12,9 +12,16 @@ import { FaEnvelope, FaGithub, FaLinkedinIn, FaDiscord } from 'react-icons/fa';
 import image from '../assets/images/profile/profile-2.jpeg';
 import { useState } from 'react';
 import useScrollToSection from '../customHooks/useScrollToSection';
+import { useEffect } from 'react';
 
-export default function Navigation() {
-    const [className, setClassName] = useState('home');
+export default function Navigation({ section }) {
+    const [className, setClassName] = useState('');
+    useEffect(() => {
+        if (section) {
+            setClassName('');
+        }
+    }, [section]);
+
     useScrollToSection(className);
 
     const indicateSection = (e) => {
@@ -62,7 +69,7 @@ export default function Navigation() {
                     <div
                         onClick={(_) => indicateSection('home')}
                         className={
-                            className === 'home'
+                            className === 'home' || section === 'home'
                                 ? 'navigation__item active'
                                 : 'navigation__item'
                         }
@@ -72,7 +79,7 @@ export default function Navigation() {
                     </div>
                     <div
                         className={
-                            className === 'about'
+                            className === 'about' || section === 'about'
                                 ? 'navigation__item active'
                                 : 'navigation__item'
                         }
@@ -83,7 +90,7 @@ export default function Navigation() {
                     </div>
                     <div
                         className={
-                            className === 'resume'
+                            className === 'resume' || section === 'resume'
                                 ? 'navigation__item active'
                                 : 'navigation__item'
                         }
@@ -94,7 +101,7 @@ export default function Navigation() {
                     </div>
                     <div
                         className={
-                            className === 'portfolio'
+                            className === 'portfolio' || section === 'portfolio'
                                 ? 'navigation__item active'
                                 : 'navigation__item'
                         }
@@ -105,7 +112,7 @@ export default function Navigation() {
                     </div>
                     <div
                         className={
-                            className === 'contacts'
+                            className === 'contacts' || section === 'contacts'
                                 ? 'navigation__item active'
                                 : 'navigation__item'
                         }

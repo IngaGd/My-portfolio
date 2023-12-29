@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import resumeList from '../assets/data/resume';
 
-export default function Resume() {
-    const { ref, inView } = useInView({
+export default function Resume({ setSection }) {
+    const [ref, inView] = useInView({
         threshold: 0.2,
     });
+
+    useEffect(() => {
+        if (inView) {
+            setSection('resume');
+        }
+    }, [inView, setSection]);
+
     return (
         <div className="background grey">
             <div className="resume u-section-padding" ref={ref}>

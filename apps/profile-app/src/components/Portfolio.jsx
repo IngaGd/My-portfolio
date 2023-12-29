@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import porfolioList from '../assets/data/portfolio';
 import Popup from './Popup';
 
-export default function Portfolio() {
+export default function Portfolio({ setSection }) {
     const list = porfolioList;
     const [selectedProject, setSelectedProject] = useState(null);
 
@@ -14,9 +14,15 @@ export default function Portfolio() {
     const handleColePopup = () => {
         setSelectedProject(null);
     };
-    const { ref, inView } = useInView({
+    const [ref, inView] = useInView({
         threshold: 0.2,
     });
+
+    useEffect(() => {
+        if (inView) {
+            setSection('portfolio');
+        }
+    }, [inView, setSection]);
 
     return (
         <>

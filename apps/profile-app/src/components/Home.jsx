@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
-export default function Home() {
+export default function Home({ setSection }) {
+    const [ref, inView] = useInView({
+        threshold: 0.2,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setSection('home');
+        }
+    }, [inView, setSection]);
+
     return (
         <>
-            <div className="home">
+            <div className="home" ref={ref}>
                 <div className="home__text">
                     <h1 className="heading-1">Inga Gudaitė</h1>
                     <div className="home__profesion">
