@@ -21,10 +21,13 @@ export default function About({ setSection }) {
                 <h2 className="heading-2">About</h2>
                 <span className="underline"></span>
                 <p className="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quibusdam, voluptate atque enim ut, vitae sit voluptatum aut
-                    nam vero alias qui debitis facere reprehenderit minus magni
-                    assumenda quia id fuga.
+                    My background in exact sciences has shaped my approach,
+                    blending a love for detail with creative thinking. Starting
+                    out in the supply chain world, I've taken a big leap to
+                    become a programmer, driven by a deep love for learning and
+                    growing. Even when I'm not programming, I'm diving into
+                    physics, exploring human consciousness - my journey is about
+                    never settling, always curious.
                 </p>
                 <div className="about__content">
                     <div
@@ -41,22 +44,15 @@ export default function About({ setSection }) {
                     >
                         <h2 className="heading-3">Full-Stack Developer</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Vero consectetur sunt vitae ipsa dicta est,
-                            eaque excepturi consequatur hic quisquam corporis
-                            voluptate iure maxime eos quia maiores a molestias
-                            ipsam.
+                            Right now, I'm into SASS and React - love seeing my
+                            code come to life visually. I've also got a solid
+                            grasp on the backend with technologies like Node.js
+                            and MariaDB, and more - I have expanded my skills
+                            for my freelancing work, getting hands-on with
+                            DevOps.
                         </p>
                         <div className="personal-info">
                             <ul className="personal-info--list-left">
-                                <li className="list-item">
-                                    <span>
-                                        <FaChevronRight />
-                                    </span>
-                                    <p>
-                                        <b>Birthday: </b>1981 11 18
-                                    </p>
-                                </li>
                                 <li className="list-item">
                                     <span>
                                         <FaChevronRight />
@@ -70,7 +66,7 @@ export default function About({ setSection }) {
                                         <FaChevronRight />
                                     </span>
                                     <p>
-                                        <b>Phone: </b> +370 656 09296
+                                        <b>Email: </b>info@inga-portfolio.lt
                                     </p>
                                 </li>
                                 <li className="list-item">
@@ -88,23 +84,7 @@ export default function About({ setSection }) {
                                         <FaChevronRight />
                                     </span>
                                     <p>
-                                        <b>Age: </b>42
-                                    </p>
-                                </li>
-                                <li className="list-item">
-                                    <span>
-                                        <FaChevronRight />
-                                    </span>
-                                    <p>
-                                        <b>Degree: </b>Master
-                                    </p>
-                                </li>
-                                <li className="list-item">
-                                    <span>
-                                        <FaChevronRight />
-                                    </span>
-                                    <p>
-                                        <b>Email: </b>inga.gudaite@gmail.com
+                                        <b>Degree: </b>Master's
                                     </p>
                                 </li>
                                 <li className="list-item">
@@ -115,14 +95,25 @@ export default function About({ setSection }) {
                                         <b>Freelance: </b>Available
                                     </p>
                                 </li>
+                                <li className="list-item">
+                                    <span>
+                                        <FaChevronRight />
+                                    </span>
+                                    <p>
+                                        <b>Full-time work: </b>Available
+                                    </p>
+                                </li>
                             </ul>
                         </div>
                         <div className="text">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Esse corrupti laborum tempora ducimus maxime
-                            nesciunt, magnam consectetur! Voluptatem esse hic
-                            sunt, blanditiis ipsam quibusdam sapiente quisquam
-                            modi quo aliquid dolorem.
+                            In my free time, I love expressing myself through
+                            painting and drawing. I also enjoy staying active
+                            with gym sessions or embarking on long, reflective
+                            walks. Whether I'm sharing laughs with close
+                            friends, spending quality time with a significant
+                            other, or finding peace in silent meditation, I
+                            cherish these moments that enrich my life beyond the
+                            screen.
                         </div>
                     </div>
                 </div>

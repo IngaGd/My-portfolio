@@ -5,11 +5,10 @@ const resumeList = [
         content: [
             {
                 title: 'Inga Gudaitė',
-                description: 'Full stack developer, 1 year experience in javascript, css, react, node.js',
-                date: '1981 11 18',
+                description: 'Full stack developer, 1 year experience in JavaScript, CSS (and SASS), React, Node.js, MySql',
+                date: '2022 November',
                 list: [
-                    { item: '+370 656 09296' },
-                    { item: 'inga.gudaite@gmail.com' },
+                    { item: 'info@inga-portfolio.lt' },
                     { item: 'https://www.linkedin.com/in/inga-gudaite/' },
                     { item: 'https://github.com/IngaGd' }
                 ]
@@ -43,6 +42,28 @@ const resumeList = [
                     }
                 ]
             },
+            {
+                title: 'Java',
+                description: 'WomenGoTech, Accenture',
+                date: '2022 Jully - 2022 October',
+                list: [
+                    {
+                        item: 'Fundamentals: variables, data types, math/logic operations, and date/time management. Code branching and looping, and use of RegExp.'
+                    },
+                    {
+                        item: 'Working with arrays, strings, classes, and methods in Java.'
+                    },
+                    {
+                        item: 'Understanding of Object-Oriented Programming (OOP) concepts.'
+                    },
+                    {
+                        item: 'Experience in utilising collections and maps for data management, and familiarity with (UML).'
+                    },
+                    {
+                        item: 'SQL database (basics, data grouping, database management, functions, procedures, triggers, joins, relational database, transactions.'
+                    }
+                ]
+            }
         ]
     },
     {

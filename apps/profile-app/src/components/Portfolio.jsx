@@ -31,10 +31,8 @@ export default function Portfolio({ setSection }) {
                     <h2 className="heading-2">Portfolio</h2>
                     <span className="underline"></span>
                     <p className="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quibusdam, voluptate atque enim ut, vitae sit voluptatum
-                        aut nam vero alias qui debitis facere reprehenderit
-                        minus magni assumenda quia id fuga.
+                        Below are examples of my work, please feel free to
+                        explore.
                     </p>
                     <div
                         className={`portfolio__content ${
