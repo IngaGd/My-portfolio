@@ -99,7 +99,8 @@ const porfolioList = [
             }
         ],
         description: `Infinite image scroll app with 'like' option, project is created with Pexels API integration, favourite and unfavourite funtionality integration with localstorage. Created GitHub page.`,
-        link: 'https://github.com/IngaGd/much-sroll-such-image'
+        link: 'https://ingagd.github.io/much-sroll-such-image/',
+        Repository: 'https://github.com/IngaGd/much-sroll-such-image'
     }
     ,
     {
@@ -127,49 +128,50 @@ const porfolioList = [
             }
         ],
         description: 'Weather app with locations on map selection, weather options choosal and graphical representation.  Data is fetched from open source API - open-meteo, map is integrated with Leaflet lybrary and graphs with react-graph. Created GitHub page.',
-        link: 'https://github.com/IngaGd/weather-app'
+        link: 'https://ingagd.github.io/weather-app/',
+        Repository: 'https://github.com/IngaGd/weather-app'
     }
-    ,
-    {
-        id: '5',
-        title: 'Lemonades shop app',
-        imageMain: simoDelicatessenImg,
-        images: [
-            {
-                img: bankImg1,
-                title: 'Authorization'
-            },
-            {
-                img: bankImg2,
-                title: 'Graph and create account'
-            },
-            {
-                img: bankImg3,
-                title: 'Mobile layout'
-            },
-            {
-                img: bankImg4,
-                title: 'Edit account'
-            }
-        ],
-        description: 'App with add to cart functionality',
-        link: 'https://github.com/IngaGd/simo-delicatessen'
-    }
-    ,
-    {
-        id: '6',
-        title: 'Fingers crossed app',
-        imageMain: fcAppImg,
-        images: [
-            bankImg1,
-            bankImg2,
-            bankImg3,
-            bankImg4,
-        ],
-        description: 'App with CSS animation and count down',
-        link: 'https://github.com/IngaGd/fc-react-app'
-    }
-    ,
+    // ,
+    // {
+    //     id: '5',
+    //     title: 'Lemonades shop app',
+    //     imageMain: simoDelicatessenImg,
+    //     images: [
+    //         {
+    //             img: bankImg1,
+    //             title: 'Authorization'
+    //         },
+    //         {
+    //             img: bankImg2,
+    //             title: 'Graph and create account'
+    //         },
+    //         {
+    //             img: bankImg3,
+    //             title: 'Mobile layout'
+    //         },
+    //         {
+    //             img: bankImg4,
+    //             title: 'Edit account'
+    //         }
+    //     ],
+    //     description: 'App with add to cart functionality',
+    //     link: 'https://github.com/IngaGd/simo-delicatessen'
+    // }
+    // ,
+    // {
+    //     id: '6',
+    //     title: 'Fingers crossed app',
+    //     imageMain: fcAppImg,
+    //     images: [
+    //         bankImg1,
+    //         bankImg2,
+    //         bankImg3,
+    //         bankImg4,
+    //     ],
+    //     description: 'App with CSS animation and count down',
+    //     link: 'https://github.com/IngaGd/fc-react-app'
+    // }
+    // ,
     // {
     //     id: '7',
     //     title: 'Natour',
