@@ -37,8 +37,8 @@
                 padding: 0;
             }
             &.animated {
-                animation-name: moveInRight;
-                animation-duration: 2s;
+                animation-name: moveInLeft;
+                animation-duration: 1.5s;
                 animation-timing-function: ease-out;
             }
             img {
@@ -58,8 +58,8 @@
             row-gap: 2rem;
             text-align: justify;
             &.animated {
-                animation-name: moveInLeft;
-                animation-duration: 2s;
+                animation-name: moveInRight;
+                animation-duration: 1.5s;
                 animation-timing-function: ease-out;
             }
 
