@@ -25,9 +25,7 @@ export default function About({ setSection }) {
                     blending a love for detail with creative thinking. Starting
                     out in the supply chain world, I've taken a big leap to
                     become a programmer, driven by a deep love for learning and
-                    growing. Even when I'm not programming, I'm diving into
-                    physics, exploring human consciousness - my journey is about
-                    never settling, always curious.
+                    growing.
                 </p>
                 <div className="about__content">
                     <div
@@ -106,14 +104,9 @@ export default function About({ setSection }) {
                             </ul>
                         </div>
                         <div className="text">
-                            In my free time, I love expressing myself through
-                            painting and drawing. I also enjoy staying active
-                            with gym sessions or embarking on long, reflective
-                            walks. Whether I'm sharing laughs with close
-                            friends, spending quality time with a significant
-                            other, or finding peace in silent meditation, I
-                            cherish these moments that enrich my life beyond the
-                            screen.
+                            Even when I'm not programming, I'm diving into
+                            physics, exploring human consciousness - my journey
+                            is about never settling, always curious.
                         </div>
                     </div>
                 </div>
