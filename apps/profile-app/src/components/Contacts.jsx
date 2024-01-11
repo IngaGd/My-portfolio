@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { FaLocationDot, FaMobile, FaEnvelope } from 'react-icons/fa6';
+import { FaLocationDot, FaEnvelope, FaLinkedin } from 'react-icons/fa6';
 // import Form from './Form';
 
 export default function Contacts({ setSection }) {
@@ -75,6 +75,7 @@ export default function Contacts({ setSection }) {
         //         </div>
         //     </div>
         // </div>
+
         <div className="background grey">
             <div className="contacts u-section-padding" ref={ref}>
                 <h2 className="heading-2">Contacts</h2>
@@ -107,18 +108,20 @@ export default function Contacts({ setSection }) {
                                     <p className="contact-info__title">
                                         Email:{' '}
                                     </p>
-                                    <p>inga.gudaite@gmail.com</p>
+                                    <p>info@inga-portfolio.lt</p>
                                 </div>
                             </div>
                             <div className="contact-info">
                                 <span>
-                                    <FaMobile className="contact-info__icon" />
+                                    <FaLinkedin className="contact-info__icon" />
                                 </span>
                                 <div className="contact-info__texts">
                                     <p className="contact-info__title">
-                                        Call:{' '}
+                                        LinkedIn:{' '}
                                     </p>
-                                    <p>+370 656 09296</p>
+                                    <a href="https://www.linkedin.com/in/inga-gudaite/">
+                                        linkedin.com/in/inga-gudaite
+                                    </a>
                                 </div>
                             </div>
                         </div>

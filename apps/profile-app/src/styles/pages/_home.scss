@@ -27,7 +27,7 @@
     &__profesion {
         display: flex;
         justify-content: space-around;
-        @for $i from 1 through 13 {
+        @for $i from 1 through 16 {
             .sp-#{$i} {
                 .underline {
                     &::after {

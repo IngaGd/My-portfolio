@@ -173,6 +173,10 @@
                 &__title {
                     font-weight: 600;
                 }
+                a {
+                    color: inherit;
+                    text-decoration-color: $color-tertiary;
+                }
             }
         }
     }

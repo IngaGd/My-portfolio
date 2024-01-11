@@ -59,7 +59,7 @@ export default function Navigation({ section }) {
                         <FaGithub />
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/inga-gudaite/"
+                        href="https://discord.com/users/inga1143"
                         className="navigation__socials--icon"
                     >
                         <FaDiscord />
