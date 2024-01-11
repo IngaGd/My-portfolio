@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { FaLocationDot, FaEnvelope, FaLinkedin } from 'react-icons/fa6';
+import {
+    FaLocationDot,
+    FaDiscord,
+    FaGithub,
+    FaLinkedin,
+} from 'react-icons/fa6';
 // import Form from './Form';
 
 export default function Contacts({ setSection }) {
@@ -90,9 +95,10 @@ export default function Contacts({ setSection }) {
                     <div className="contacts__details">
                         <div className="text">
                             <div className="contact-info">
-                                <span>
+                                <span className="icon">
                                     <FaLocationDot className="contact-info__icon" />
                                 </span>
+
                                 <div className="contact-info__texts">
                                     <p className="contact-info__title">
                                         Location:{' '}
@@ -101,26 +107,50 @@ export default function Contacts({ setSection }) {
                                 </div>
                             </div>
                             <div className="contact-info">
-                                <span>
-                                    <FaEnvelope className="contact-info__icon" />
-                                </span>
-                                <div className="contact-info__texts">
-                                    <p className="contact-info__title">
-                                        Email:{' '}
-                                    </p>
-                                    <p>info@inga-portfolio.lt</p>
-                                </div>
-                            </div>
-                            <div className="contact-info">
-                                <span>
+                                <a
+                                    href="https://www.linkedin.com/in/inga-gudaite/"
+                                    className="icon"
+                                >
                                     <FaLinkedin className="contact-info__icon" />
-                                </span>
+                                </a>
                                 <div className="contact-info__texts">
                                     <p className="contact-info__title">
                                         LinkedIn:{' '}
                                     </p>
                                     <a href="https://www.linkedin.com/in/inga-gudaite/">
                                         linkedin.com/in/inga-gudaite
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="contact-info">
+                                <a
+                                    href="https://discord.com/users/inga1143"
+                                    className="icon"
+                                >
+                                    <FaDiscord className="contact-info__icon" />
+                                </a>
+                                <div className="contact-info__texts">
+                                    <p className="contact-info__title">
+                                        Discord:{' '}
+                                    </p>
+                                    <a href="https://discord.com/users/inga1143">
+                                        discord.com/users/inga1143
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="contact-info">
+                                <a
+                                    href="https://github.com/IngaGd"
+                                    className="icon"
+                                >
+                                    <FaGithub className="contact-info__icon" />
+                                </a>
+                                <div className="contact-info__texts">
+                                    <p className="contact-info__title">
+                                        GitHub:{' '}
+                                    </p>
+                                    <a href="https://github.com/IngaGd">
+                                        github.com/IngaGd
                                     </a>
                                 </div>
                             </div>
