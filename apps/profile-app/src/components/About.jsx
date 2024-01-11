@@ -56,27 +56,9 @@ export default function About({ setSection }) {
                                         <FaChevronRight />
                                     </span>
                                     <p>
-                                        <b>Website: </b>inga-portfolio.lt
-                                    </p>
-                                </li>
-                                <li className="list-item">
-                                    <span>
-                                        <FaChevronRight />
-                                    </span>
-                                    <p>
-                                        <b>Email: </b>info@inga-portfolio.lt
-                                    </p>
-                                </li>
-                                <li className="list-item">
-                                    <span>
-                                        <FaChevronRight />
-                                    </span>
-                                    <p>
                                         <b>City: </b> Vilnius, Lithuania
                                     </p>
                                 </li>
-                            </ul>
-                            <ul className="personal-info--list-right">
                                 <li className="list-item">
                                     <span>
                                         <FaChevronRight />
@@ -85,6 +67,8 @@ export default function About({ setSection }) {
                                         <b>Degree: </b>Master's
                                     </p>
                                 </li>
+                            </ul>
+                            <ul className="personal-info--list-right">
                                 <li className="list-item">
                                     <span>
                                         <FaChevronRight />

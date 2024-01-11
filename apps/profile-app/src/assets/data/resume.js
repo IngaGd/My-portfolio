@@ -8,7 +8,6 @@ const resumeList = [
                 description: 'Full stack developer, 1 year experience in JavaScript, CSS (and SASS), React, Node.js, MySql',
                 date: '2022 November',
                 list: [
-                    { item: 'info@inga-portfolio.lt' },
                     { item: 'https://www.linkedin.com/in/inga-gudaite/' },
                     { item: 'https://github.com/IngaGd' }
                 ]
