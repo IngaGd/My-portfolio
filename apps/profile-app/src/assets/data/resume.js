@@ -44,7 +44,7 @@ const resumeList = [
             {
                 title: 'Java',
                 description: 'WomenGoTech, Accenture',
-                date: '2022 Jully - 2022 October',
+                date: '2022 July - 2022 October',
                 list: [
                     {
                         item: 'Fundamentals: variables, data types, math/logic operations, and date/time management. Code branching and looping, and use of RegExp.'
