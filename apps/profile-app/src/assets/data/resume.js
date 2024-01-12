@@ -33,7 +33,7 @@ const resumeList = [
                         item: 'Extensive experience with React, covering core concepts, context, hooks, and CRUD operations.'
                     },
                     {
-                        item: 'Utilising Express to implement HTTP methods such as GET, POST, DELETE, and UPDATE.'
+                        item: 'Utilising Express to implement HTTP methods such as GET, POST, PUT, and DELETE.'
                     },
                     { item: 'Leveraging the MariaDB platform for MySQL database operations.' },
                     {
