@@ -9,8 +9,15 @@
     &::after {
         content: '';
         position: absolute;
-        top: 0rem;
+        top: 0;
         left: 0;
         transition: all 0.3s ease;
+    }
+}
+@-moz-document url-prefix() {
+    .underline {
+        &::after {
+            top: 2rem;
+        }
     }
 }
