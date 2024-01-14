@@ -155,16 +155,16 @@ export default function Contacts({ setSection }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="contacts__map-box">
+                        {/* <div className="contacts__map-box">
                             <iframe
-                                src="https://maps.google.com/maps?q=Vilnius&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                                frameborder="0"
+                                src={mapSrc}
+                                frameBorder="0"
                                 scrolling="no"
                                 title="Vilnius City Municipality"
-                                allowfullscreen
+                                allowFullScreen
                                 className="map"
                             ></iframe>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

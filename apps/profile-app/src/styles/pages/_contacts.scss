@@ -125,22 +125,31 @@
         padding: 2.5rem;
         border-radius: 3px;
         box-shadow: $container-box-shadow;
+        justify-items: center;
 
         @media only screen and (min-width: $bp-medium-l) {
             grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }
 
         .text {
             display: grid;
             grid-template-rows: repeat(3, min-content);
             row-gap: 2rem;
-            @media only screen and (min-width: $bp-medium-l) {
-                grid-template-rows: repeat(3, min-content);
+
+            @media only screen and (min-width: $bp-medium) {
+                // grid-template-rows: repeat(3, min-content);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
                 align-self: center;
-                justify-self: start;
-                row-gap: 5rem;
+                justify-self: center;
+                column-gap: 5rem;
                 padding-left: 4rem;
+            }
+            @media only screen and (min-width: $bp-medium-l) {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr;
             }
 
             .contact-info {
@@ -148,7 +157,7 @@
 
                 align-items: center;
 
-                .icon {
+                &__icon {
                     font-size: 1.8rem;
                     border-radius: 50%;
                     width: 4rem;
@@ -164,9 +173,12 @@
                         background-color: rgba($color-tertiary, 0.3);
                     }
                 }
-                &__icon {
-                    transform: translate(25%, 25%);
-                }
+                // &__icon {
+                //     transform: translate(25%, 25%);
+                //     width: 4rem;
+                //     height: 4rem;
+                //     padding: 0.5rem;
+                // }
                 &__texts {
                     padding-left: 1.4rem;
                 }
