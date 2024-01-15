@@ -1,0 +1,37 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 45em) {
+            //720px
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 57em) {
+            //912px
+            @content;
+        }
+    }
+
+    @if $breakpoint == tablet-land {
+        @media (max-width: 68em) {
+            //1088px
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: 71.25em) {
+            //1140px
+            @content;
+        }
+    }
+    @if $breakpoint == desktop-big {
+        @media (min-width: 71.25em) {
+            //1140px
+            @content;
+        }
+    }
+}
+
+@mixin center-layout {
+    grid-column: center-start / center-end;
+}

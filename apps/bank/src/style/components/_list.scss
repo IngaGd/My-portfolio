@@ -1,0 +1,68 @@
+.list {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    color: $color-grey-light-1;
+    font-size: 1.8rem;
+
+    @include center-layout;
+    &__taxes-container {
+        margin-bottom: 2rem;
+    }
+    &__title {
+        display: grid;
+        justify-self: center;
+        font-size: 2.2rem;
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+    }
+    &__clients {
+        .client {
+            display: grid;
+            background-color: $color-primary-light;
+            grid-template-columns: repeat(5, 1fr);
+            align-items: center;
+            border-radius: 3rem;
+            margin-bottom: 1.5rem;
+            padding-right: 3rem;
+
+            @include respond(tablet-land) {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 0.25fr;
+            }
+            @include respond(phone) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr 0.25fr 0.25fr;
+                justify-items: center;
+                padding-right: 0;
+            }
+            &__image-box {
+                margin: 2rem;
+                @include respond(phone) {
+                    grid-row: 1;
+                    grid-column: 1 / -1;
+                }
+            }
+            &__image {
+                border-radius: 50%;
+                width: 12rem;
+                height: 12rem;
+                object-fit: cover;
+                @include respond(phone) {
+                    border-radius: 50%;
+                    width: 20rem;
+                    height: 20rem;
+                    object-fit: cover;
+                    justify-self: center;
+                }
+            }
+            &__data {
+                display: grid;
+                row-gap: 1rem;
+                justify-items: center;
+            }
+            &__label-text {
+            }
+        }
+    }
+}

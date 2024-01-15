@@ -1,0 +1,99 @@
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-primary-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    @include respond(phone) {
+        // font-size: 1.6rem;
+    }
+    &.btn--tax {
+        margin-top: 10px;
+        background-color: $color-violet;
+        margin-left: 10px;
+        color: $color-primary-dark;
+        &:hover {
+            transform: translateY(-4px);
+            background-color: $color-violet-dark;
+        }
+    }
+    &.btn--create {
+        width: 11rem;
+        background-color: $color-skyblue;
+        color: $color-primary-dark;
+        &:hover {
+            transform: translateY(-4px);
+            background-color: $color-skyblue-dark;
+        }
+    }
+    &.btn-list {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        column-gap: 2rem;
+        margin-right: 3rem;
+        @include respond(tablet-land) {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            padding-bottom: 2rem;
+        }
+        @include respond(phone) {
+            grid-row: 3;
+            margin-right: 0rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .block,
+        .unblock {
+            width: 11rem;
+            background-color: $color-yellow;
+            &:hover {
+                transform: translateY(-4px);
+                background-color: $color-yellow-dark;
+            }
+            &--active {
+                width: 11rem;
+                background-color: $color-violet;
+            }
+        }
+        .delete,
+        .edit {
+            background-color: $color-skyblue;
+            width: 4rem;
+            &:hover {
+                transform: translateY(-4px);
+                background-color: $color-skyblue-dark;
+            }
+        }
+    }
+    &.filter,
+    &.sort {
+        gap: 1rem;
+        margin-bottom: 1rem;
+        color: $color-primary-dark;
+    }
+    &.filter {
+        background-color: $color-violet;
+        &:hover {
+            transform: translateY(-4px);
+            background-color: $color-violet-dark;
+        }
+    }
+    &.sort,
+    &.confirm {
+        background-color: $color-skyblue;
+        &:hover {
+            transform: translateY(-4px);
+            background-color: $color-skyblue-dark;
+        }
+    }
+}
