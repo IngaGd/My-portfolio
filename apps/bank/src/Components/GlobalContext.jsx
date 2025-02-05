@@ -9,9 +9,9 @@ import { useMessages } from "../Use/useMessages";
 import { useModal } from "../Use/useModal";
 import axios from "axios";
 
-const URL = process.env.REACT_APP_URL;
-const logoutURL = `${URL}logout`;
-const reduceBalancesURL = `${URL}reduceBalances`;
+const logoutURL = process.env.REACT_APP_URL + "/bank/api/logout";
+const reduceBalancesURL =
+  process.env.REACT_APP_URL + "/bank/api/reduceBalances";
 
 export const GlobalContext = createContext();
 

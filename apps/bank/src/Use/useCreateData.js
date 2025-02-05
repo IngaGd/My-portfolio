@@ -1,25 +1,22 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
-const URL = process.env.REACT_APP_URL + 'bank';
+const URL = process.env.REACT_APP_URL + "/bank/api/create";
 
-export const useCreateData = init => {
+export const useCreateData = (init) => {
+  const [response, setResponse] = useState(null);
+  const [data, setCreateData] = useState(init);
 
-    const [response, setResponse] = useState(null);
-    const [data, setCreateData] = useState(init);
+  useEffect(() => {
+    if (data === null) {
+      return;
+    }
+    axios.post(URL, data).then((res) => {
+      console.log(res.data);
+      setResponse(res.data);
+    });
+  }, [data]);
 
-    useEffect(() => {
-        if (data === null) {
-            return;
-        }
-        axios.post(URL, data)
-            .then(res => {
-                console.log(res.data);
-                setResponse(res.data);
-            })
-    }, [data]);
-
-
-    return [response, setCreateData];
-}
+  return [response, setCreateData];
+};

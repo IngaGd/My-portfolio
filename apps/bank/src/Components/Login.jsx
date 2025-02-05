@@ -3,8 +3,7 @@ import axios from "axios";
 import { GlobalContext } from "./GlobalContext";
 import Nav from "./Nav";
 
-const URL = process.env.REACT_APP_URL || "http://localhost:3003/";
-const loginURL = `${URL}login`;
+const loginURL = process.env.REACT_APP_URL + "/bank/api/login";
 
 function Login() {
   const [error, setError] = useState(null);

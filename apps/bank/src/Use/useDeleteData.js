@@ -1,26 +1,24 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-const URL = process.env.REACT_APP_URL + 'bank';
+const URL = process.env.REACT_APP_URL + "/bank/api/delete";
 
-export const useDeleteData = init => {
+export const useDeleteData = (init) => {
+  const [response, setResponse] = useState(null);
+  const [data, setDeleteData] = useState(init);
 
-    const [response, setResponse] = useState(null);
-    const [data, setDeleteData] = useState(init);
+  useEffect(() => {
+    if (data === null) {
+      return;
+    }
+    axios
+      .delete(URL + "/" + data.id) //naudojam metoda delete
+      //plius data.id, perdavimas per parametrus
+      .then((res) => {
+        console.log(res.data);
+        setResponse(res.data);
+      });
+  }, [data]);
 
-    useEffect(() => {
-        if (data === null) {
-            return;
-        }
-        axios.delete(URL + '/' + data.id) //naudojam metoda delete
-            //plius data.id, perdavimas per parametrus 
-            .then(res => {
-                console.log(res.data);
-                setResponse(res.data);
-            })
-
-    }, [data])
-
-    return [response, setDeleteData];
-
-}
+  return [response, setDeleteData];
+};

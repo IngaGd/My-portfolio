@@ -4,8 +4,7 @@ import axios from "axios";
 import Login from "./Login";
 import { GlobalContext } from "./GlobalContext";
 
-const URL = process.env.REACT_APP_URL;
-const loginURL = `${URL}login`;
+const loginURL = process.env.REACT_APP_URL + "/bank/api/login";
 
 function Authorisation({ children, allowUnauthenticated }) {
   const { setAuthName, logged, setLogged } = useContext(GlobalContext);

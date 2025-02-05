@@ -2,8 +2,7 @@ import React, { useContext, useState } from "react";
 import { GlobalContext } from "./GlobalContext";
 import Nav from "./Nav";
 
-const URL = process.env.REACT_APP_URL || "http://localhost:3003/";
-const registerURL = `${URL}register`;
+const registerURL = process.env.REACT_APP_URL + "/bank/api/register";
 
 export default function Register() {
   const [error, setError] = useState(null);
